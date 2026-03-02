@@ -1,9 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Documentation
-    url: https://zvec.org/en/
-    about: Check the quickstart, build guide, and API docs first.
-
-  - name: Python API Examples
-    url: https://zvec.org/en/docs/quickstart/
-    about: See working usage examples.
